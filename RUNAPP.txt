@@ -1,0 +1,5 @@
+HOW TO RUN THE APP.
+Use the command pip install -r requirements.txt after downloading the zip folder.
+This will download all the dependencies needed to run the app.
+Then go to cmd and use the command: "streamlit run qachat.py".
+This will run the app on your local host.
