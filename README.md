@@ -13,5 +13,6 @@ This will ensure that a user gets his desired ouput with less effort.
 The bot generates the answer to the queries in chunks.
 This chatbot uses the convenient session_state method of Streamlit, with which we can view the chat history.
 </p>
+
 [image](https://github.com/averagestud/QAChatbot-using-Gemini-/assets/128608033/96c26111-3448-4acc-ad54-d7b1705845c1)
 
