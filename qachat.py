@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 load_dotenv()
 GOOGLE_API_KEY="AIzaSyC_viZYPOrne13GxqCanPxbQnqaLCh1md0"
+
 # In this chatbot I am using Gemini Pro API to create a simple conversational chatbot
 import streamlit as st
 import os 
@@ -17,12 +18,16 @@ def get_gemini_response(question):
 
 # Initialising the streamlit app to run the model
 st.set_page_config(page_title="Q&A Chatbot")
-
 st.header("Chatbot using Gemini Pro")
 
 # Initialize the session to store history of the chat performed with the chatbot
 if 'chat_history' not in st.session_state:
     st.session_state['chat_history']=[]
+    
+# Generate greeting so as to greet the user.
+greet = model.generate_content("Hi!")
+st.write("Bot:", greet.text)
+
 
 # Take the input for the query from the user
 input=st.text_input("Input: ", key="input")
@@ -31,7 +36,7 @@ submit=st.button("Ask the question to be answered")
 # As soon as the user submits the input we will generate a response for the user
 if submit and input:
     response = get_gemini_response(input)
-
+    
     # Add user query and the bot response to the chat history
     st.session_state['chat_history'].append(("You", input))
     st.subheader("The response is:")
