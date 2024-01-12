@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 load_dotenv()
-GOOGLE_API_KEY="AIzaSyC_viZYPOrne13GxqCanPxbQnqaLCh1md0"
+GOOGLE_API_KEY="Your API key goes here."
 
 # In this chatbot I am using Gemini Pro API to create a simple conversational chatbot
 import streamlit as st
